@@ -2,9 +2,6 @@
 
 using namespace std;
 
-string ltrim(const string &);
-string rtrim(const string &);
-
 // Complete the dayOfProgrammer function below.
 string dayOfProgrammer(int year) {
     string diff;
