@@ -3,7 +3,7 @@
 using namespace std;
 
 int fun(vector<int> a){
-    int i, q ;
+    int i, q, num1, num2, diff ;
     int n=a.size();
     for(i=0;i<n;i++){
     if(a[i]>=38){
@@ -15,11 +15,14 @@ int fun(vector<int> a){
             a[i] = num2;
         }
     }
-    return a;
+    }
+    for(int i=0; i < n; i++){
+      std::cout << a.at(i) << "\n";}
+    return 0;
 }
 
 int main(){
-    int n;
+    int n, i, x;
     cin >> n;
     vector<int> arr;
     for(i=0;i<n;i++){
@@ -27,8 +30,5 @@ int main(){
         arr.push_back(x);
     }
     fun(arr);
-    for(int i=0; i < arr.size(); i++)
-      std::cout << arr.at(i) << "\n";
-}
     return 0;
 }
