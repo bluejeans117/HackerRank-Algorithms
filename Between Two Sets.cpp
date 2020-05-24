@@ -24,8 +24,8 @@ int fun(int  m,int n,vector<int> a,vector<int> b ){
 
         //for(j=0;j<n;j++){         //check 2nd set
         while(j<n){
-            if(b[j]%z[i]==0)
-                y.push_back(z[i]);
+            if(b[j]%z[i]==0)            //how to check i satisfies the condition for every element of a
+                y.push_back(z[i]);       //array to store elts which satisfy the condtition
         }
     }   
     cout << y.size();
