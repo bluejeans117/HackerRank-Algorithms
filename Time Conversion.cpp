@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include<stdlib.h>
 
 using namespace std;
 
@@ -6,42 +7,19 @@ using namespace std;
  * Complete the timeConversion function below.
  */
 string timeConversion(string s) {
-    //string hr;
-    if(s[8]=='P'){
-       if(s[0]=='1' && s[1]=='2'){ // && s[3]=='0' && s[4]=='0' && s[6]=='0' && s[7]=='0'){
-            s.pop_back();
-            s.pop_back();
-        }
-        else{
-        s[0] = s[0]+1;
-        s[1] = s[1]+2;     //add 12 to given hh
-        s.pop_back();
-        s.pop_back();
-        }
-    }
-    else if(s[8]=='A'){
-        //hr=s[0]+s[1];
-        if(s[0]=='1'&& s[1]=='2'){ //&& s[3]=='0' && s[4]=='0' && s[6]=='0' && s[7]=='0'){
-            s[0]=0;
-            s[1]=0;
-            
-            s.pop_back();
-            s.pop_back();
-        }
-        /*else if(s[0]=='1'&& s[1]=='2'){
-            s[0]=0;
-            s[1]=0;*/
-            /*s[3]=0;
-            s[4]=0;
-            s[6]=0;
-            s[7]=0;*/
+    stringstream idk(s.substr(0,2));
+    int hr = 0;
+    idk >> hr;
 
-        
-        else{
-            s.pop_back();
-            s.pop_back();
-        }
-    }
+    if(s[8]=='P'){
+        hr != 12? hr += 12 : hr = hr;
+    } else if (hr == 12)
+        hr = 0;
+    int tmp = hr/10;
+    s[0] = '0' + tmp;
+    tmp = hr%10;
+    s[1] = '0' + tmp;
+    s.erase(8);
     return s;
 }
 
