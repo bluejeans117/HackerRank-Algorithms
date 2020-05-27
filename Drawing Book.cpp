@@ -1,5 +1,3 @@
-https://www.hackerrank.com/challenges/drawing-book/problem
-
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -8,25 +6,13 @@ using namespace std;
  * Complete the pageCount function below.
  */
 int pageCount(int n, int p) {
-    int c1=-1, c2=-1, i=0;
-    while(i<n){
-        if(i==p || (i+1)==p)
-            c1++;
-        else 
-            i+=2;
-        
-    }
-    i=n-1;
-    while(i>0){
-        if(i==p || (i-1)==p)
-            c2++;
-        else
-            i-=2;
-        
-    }
-    return std::max(c1, c2);
-
-
+    if ((p == 1) || (p == n))
+        return 0;
+    if (p < (n-p))
+        return (p/2);
+    if ( (n%2 == 0) && ((n-p)/2 == 0))
+        return 1;
+    return ((n-p)/2);
 }
 
 int main()
