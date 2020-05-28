@@ -10,7 +10,7 @@ void kangaroo(int x1, int v1, int x2, int v2) {
     else if((x2-x1)%(v1-v2) == 0)
         cout<<"YES";
     else 
-        cout >> "NO";
+        cout << "NO";
 }
 
 int main(){
@@ -19,5 +19,3 @@ int main(){
     kangaroo(x1, x2, v1, v2); 
     return 0;
 }
-
-https://www.youtube.com/watch?v=52R2pLDjUBw
