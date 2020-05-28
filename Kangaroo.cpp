@@ -7,10 +7,13 @@ void kangaroo(int x1, int v1, int x2, int v2) {
     int i;
     if(x2>x1 && v2>v1)
         cout << "NO";
-    else if((x2-x1)%(v1-v2) == 0)
-        cout<<"YES";
-    else 
+    else if(x2>x1 && (v2-v1) == 0)
         cout << "NO";
+    else if((x2-x1) % (v1-v2) == 0 && (v1-v2) != 0)
+        cout<<"YES";
+    else
+        cout << "NO";
+ 
 }
 
 int main(){
