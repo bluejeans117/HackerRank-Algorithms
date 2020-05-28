@@ -19,3 +19,5 @@ int main(){
     kangaroo(x1, x2, v1, v2); 
     return 0;
 }
+
+https://www.youtube.com/watch?v=52R2pLDjUBw
