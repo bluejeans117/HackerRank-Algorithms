@@ -4,11 +4,11 @@ using namespace std;
 
 
 void birthday(vector<int> a, int d, int m) {
-    int i, j, c, sum;
+    int i, j, c, sum=0;
     int n = a.size();
-    for(i=0;i<n;i++){
+    for(i=0;i<(n-m);i++){
         sum = a[i];
-        for(j=i+1;j<;j++){
+        for(j=i+1;j<m;j++){
             sum+=a[j]; 
         }
         if(sum == d){
