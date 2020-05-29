@@ -9,7 +9,7 @@ void birthday(vector<int> a, int d, int m) {
     int n = a.size();
     for(i=0;i<(n-m);i++){
         sum = a[i];
-        for(j=i+1;j<m-1;j++){
+        for(j=i+1;j<m;j++){
             sum+=a[j]; 
         }
         if(sum == d){
