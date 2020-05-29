@@ -4,14 +4,19 @@ using namespace std;
 
 // Complete the formingMagicSquare function below.
 int formingMagicSquare(vector<vector<int>> s) {
-    int n = s.size();
-    int i;
-    for(i=0;i<n;i++){
-        sum += accumulate(s.begin(), s.end());
-        c+= 15 - sum;
+    
+    int i, j;
+    int sum, c=0, diff=0;
+    for(i=0;i<3;i++){
+        //for(j=0;j<3;j++){
+        sum =0;
+        sum = s[i][0] + s[i][1] + s[i][2] ;
+        diff = abs(15 - sum)  ;
+        c+= diff;
+        
     }
 
-    return sum ;
+    return c ;
 }
 
 int main()
