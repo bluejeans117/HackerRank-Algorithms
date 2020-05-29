@@ -1,3 +1,5 @@
+https://www.hackerrank.com/challenges/the-birthday-bar/problem
+
 #include <bits/stdc++.h>
 
 using namespace std;
