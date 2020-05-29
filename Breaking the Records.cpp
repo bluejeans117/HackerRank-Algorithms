@@ -6,24 +6,21 @@ vector<string> split_string(string);
 
 // Complete the breakingRecords function below.
 vector<int> breakingRecords(vector<int> scores) {
-    int max = scores[i];
-    int min = scores[i];
-    int n =scores.szie();
-    int c1, c2, i;
-    for(i=0;i<n;i++){
-        if (scores[i]> max ){
-            max =scores[i];
-            c1++;
-        }
-    }
-    for(i=0;i<n;i++){
-        if (scores[i]< min ){
-            min =scores[i];
-            c2++;
-        }
-    }
-    return (c1, c2);
+    int max = scores[0], min = scores[0], maxc =0, minc=0;
+    int n = scores.size();
 
+    for(int i=0;i<n;i++){
+        if(scores[i]> max ){
+              max= scores[i];
+              maxc++;
+        }
+        if(scores[i] < min ){
+              min= scores[i];
+              minc++;
+        }
+
+    }
+    return {maxc, minc};
 
 }
 
