@@ -84,3 +84,21 @@ return head;
 }
 
 int main()
+    
+    
+    
+    //change this
+    
+    SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* head, int data, int position) {
+    SinglyLinkedListNode *temp = head;
+    SinglyLinkedListNode *newNode = new SinglyLinkedListNode(data) ;
+   
+    for(int i=1;i<=position-1;i++){
+        temp = temp->next;
+    }
+    //SinglyLinkedListNode *temp2 = temp;
+    newNode->next = temp->next; 
+    temp->next = newNode;
+
+return head;
+}
