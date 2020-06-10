@@ -16,24 +16,15 @@ vector<string> split(const string &);
 int diagonalDifference(vector<vector<int>> arr) {
     int n = arr.size();
     int diff1=0, diff2=0, res=0;
-    int i =-1, j=-1;
-    while(i<n){
-    diff1 = arr[i++][j++]; 
-    }
-    cout << diff1;
-    //+arr[1][1]+arr[2][2];
+    int i, j, l;
 
-    i = -1;
-    j = n;
-    while(i<n){
-    diff2 = arr[i++][j--];
+    for(i=0, j=0, l=n-1;i<n;i++, j++, l--){
+        diff1 += arr[i][j]; 
+        diff2 += arr[i][l];
     }
-    cout << diff2;
-    
-    //+arr[1][1]+arr[2][0];
-    res = abs(diff1-diff2);
 
-    return res;
+
+    return abs(diff1-diff2);
 
 }
 
