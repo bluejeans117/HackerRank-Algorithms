@@ -6,13 +6,15 @@ using namespace std;
 
 
 void birthday(vector<int> a, int d, int m) {
-    int i, j, c;
+     int i, j, c=0, cnt =0;
     int sum=0;
     int n = a.size();
     for(i=0;i<(n-m);i++){
         sum = a[i];
-        for(j=i+1;j<m;j++){
-            sum+=a[j]; 
+        j=i+1;
+        while(cnt < m ){
+            sum+=a[j];
+            cnt++;
         }
         if(sum == d){
             c++;
