@@ -6,23 +6,23 @@ using namespace std;
 
 
 void birthday(vector<int> a, int d, int m) {
-     int i, j, c=0, cnt =0;
+     int i, j, c=0;
     int sum=0;
     int n = a.size();
-    for(i=0;i<(n-m);i++){
-        sum = a[i];
-        j=i+1;
-        while(cnt < m ){
-            sum+=a[j];
-            cnt++;
+    for(i=0;i<(n);i++){
+        sum = 0;
+
+        for(int j=0;j<m;j++){
+            sum+=a[i+j];
         }
         if(sum == d){
             c++;
-            sum =0;
+            //sum =0;
         }
     }
-    cout << c;    
+    cout <<  c;
 }
+
 
 int main()
 {
@@ -33,8 +33,9 @@ int main()
         cin >> x;
         arr.push_back(x);
     }
-    cout << "\n";
+   //cout << "\n";
     cin >> d >> m;
     birthday(arr,d,m);
     return 0;
 }
+
